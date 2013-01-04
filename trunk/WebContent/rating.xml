@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Page Rating" height="250" scaling="false" />
+  <UserPref name="gaAccount" display_name="Google Analytics Account" required="true" default_value="UA-28509839-1" />
+  <Content type="html">
+  <![CDATA[ 
+    <script type="text/javascript">
+    
+      var prefs = new gadgets.Prefs();
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', prefs.getString("gaAccount")]);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<div id="fbContent">
+	<h3>Did this answer your question?</h3>
+	<form action="#" name="form<portlet:namespace />">
+		<input type="radio" name="answer<portlet:namespace />" id="yes" value="Yes"><label for="yes" id="lyes">Yes</label>
+		<input type="radio" name="answer<portlet:namespace />" id="no" value="No"><label for="no" id="lno">No</label>
+	</form>
+	
+	<div id="starbay">
+		<img id="star1" src="/ptlFeedbackPortlet/img/greystar.gif" />
+		<img id="star2" src="/ptlFeedbackPortlet/img/greystar.gif" />
+		<img id="star3" src="/ptlFeedbackPortlet/img/greystar.gif" />
+		<img id="star4" src="/ptlFeedbackPortlet/img/greystar.gif" />
+		<img id="star5" src="/ptlFeedbackPortlet/img/greystar.gif" />
+	</div>
+	<div id="fbThanks"><p>&nbsp;</p></div>
+	<div class="spacer">&nbsp;</div>
+</div>
+  ]]> 
+  </Content>
+</Module>
