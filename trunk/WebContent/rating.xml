@@ -54,7 +54,7 @@
 	</div>
 
 	<script>	  
-	  function ratePage(value){
+		function ratePage(value){
 	  		var starList = document.getElementsByClassName("star");
 	  
 			  for (var i=0; i<starList.length; i++)
@@ -62,10 +62,10 @@
 			  	i<=value-1?starList[i].className="star highlight":starList[i].className="star";
 			  }
 	  		_gaq.push(['_trackEvent', 'Ranking Gadget', 'Rating', prefs.getString("rankTitle"), value]);
-	  		prefs.getString("rankThank")!=""?document.getElementById("rankThank").style.display="block";	  		
+	  		prefs.getString("rankThank")!=""?document.getElementById("rankThank").style.display="block":true;	  		
 	  	}
 	  	
-	  	prefs.getBoolean("showUseful")?document.getElementById("usefulQuestion").style.display="block";
+	  	prefs.getBoolean("showUseful")?document.getElementById("usefulQuestion").style.display="block":true;
 	  </script>
   ]]> 
   </Content>
