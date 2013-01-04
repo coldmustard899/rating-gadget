@@ -35,7 +35,7 @@
 		<img id="star5" src="./images/greystar.gif" />
 	</div>
 	<div id="fbThanks"><p>&nbsp;</p></div>
-	<div class="spacer">&nbsp;</div>
+	<a href="#" onClick="_gaq.push(['_trackEvent', 'GoogleSite', 'Testing', 'TestClick']);">ClickMe</a>
 </div>
   ]]> 
   </Content>
