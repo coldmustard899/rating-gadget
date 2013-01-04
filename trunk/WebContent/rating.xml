@@ -22,17 +22,17 @@
 	
 	<div id="fbContent">
 	<h3>Did this answer your question?</h3>
-	<form action="#" name="form<portlet:namespace />">
+	<form action="#" name="form">
 		<input type="radio" name="answer" id="yes" value="Yes"><label for="yes" id="lyes">Yes</label>
 		<input type="radio" name="answer" id="no" value="No"><label for="no" id="lno">No</label>
 	</form>
 	
 	<div id="starbay">
-		<img id="star1" src="./imgages/greystar.gif" />
-		<img id="star2" src="./imgages/greystar.gif" />
-		<img id="star3" src="./imgages/greystar.gif" />
-		<img id="star4" src="./imgages/greystar.gif" />
-		<img id="star5" src="./imgages/greystar.gif" />
+		<img id="star1" src="./images/greystar.gif" />
+		<img id="star2" src="./images/greystar.gif" />
+		<img id="star3" src="./images/greystar.gif" />
+		<img id="star4" src="./images/greystar.gif" />
+		<img id="star5" src="./images/greystar.gif" />
 	</div>
 	<div id="fbThanks"><p>&nbsp;</p></div>
 	<div class="spacer">&nbsp;</div>
