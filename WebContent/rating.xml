@@ -29,7 +29,7 @@
 		li.highlight {background:url('https://rating-gadget.googlecode.com/svn/trunk/WebContent/images/goldstar.gif') no-repeat top left;}
 		
 		#usefulQuestion{display:none}
-		#rankThank{display:none}
+		#rankThank{display:none; clear:both}
 	</style>
 
 	<div id="usefulQuestion">
@@ -65,7 +65,7 @@
 	  		prefs.getString("rankThank")!=""?document.getElementById("rankThank").style.display="block":true;	  		
 	  	}
 	  	
-	  	prefs.getBoolean("showUseful")?document.getElementById("usefulQuestion").style.display="block":true;
+	  	prefs.getBool("showUseful")?document.getElementById("usefulQuestion").style.display="block":true;
 	  </script>
   ]]> 
   </Content>
