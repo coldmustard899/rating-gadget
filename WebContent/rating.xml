@@ -6,6 +6,7 @@
   <UserPref name="rankQuestion" display_name="Question" required="true" default_value="Please rate this page" />
   <UserPref name="rankThank" display_name="Thankyou" required="true" default_value="Thankyou"  />
   <UserPref name="showUseful" display_name="Show 'Was this useful?' question" datatype="bool" /> 
+  <UserPref name="showRating" display_name="Show 'Rating' question" datatype="bool" default_value="true" />
   <Content type="html">
   <![CDATA[ 
     <script type="text/javascript">
@@ -35,8 +36,8 @@
 	<div id="usefulQuestion">
 		<h3>Was this useful?</h3>
 		<form action="#" name="form">
-			<input type="radio" name="answer" id="yes" value="Yes"><label for="yes" id="lyes">Yes</label>
-			<input type="radio" name="answer" id="no" value="No"><label for="no" id="lno">No</label>
+			<input onClick="isUseful(true)" type="radio" name="answer" id="yes" value="Yes"><label for="yes" id="lyes">Yes</label>
+			<input onClick="isUseful(false)" type="radio" name="answer" id="no" value="No"><label for="no" id="lno">No</label>
 		</form>
 	</div>
 	<div id="ranking">
@@ -65,7 +66,18 @@
 	  		prefs.getString("rankThank")!=""?document.getElementById("rankThank").style.display="block":true;	  		
 	  	}
 	  	
+	  	function isUseful(useful){
+	  		if (useful) {
+	  			_gaq.push(['_trackEvent', 'Ranking Gadget', 'Useful', prefs.getString("rankTitle")]);
+	  		}
+	  		else
+	  		{
+	  			_gaq.push(['_trackEvent', 'Ranking Gadget', 'Not Useful', prefs.getString("rankTitle")]);
+	  		}
+	  	}
+	  	
 	  	prefs.getBool("showUseful")?document.getElementById("usefulQuestion").style.display="block":true;
+	  	prefs.getBool("showRating")?document.getElementById("ranking").style.display="hidden":true;
 	  </script>
   ]]> 
   </Content>
