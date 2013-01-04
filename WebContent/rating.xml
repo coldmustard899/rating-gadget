@@ -19,16 +19,6 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();	
 	  
-	  var starList = document.getElementsByClassName("star");
-	  
-	  for (var i=0; i<starList.length; i++)
-	  {
-	  	var star = starList.item(i);
-	  	star.onClick=function(){
-	  		var value = this.id[4];
-	  		_gaq.push(['_trackEvent', 'Ranking Gadget', 'Rating', prefs.getString("rankTitle"), value]);	  		
-	  	}
-	  }
 	</script>
 
 	<div id="fbContent">
@@ -48,6 +38,21 @@
 	<div id="fbThanks"><p>&nbsp;</p></div>
 	<a href="#" onClick="_gaq.push(['_trackEvent', 'Ranking Gadget', 'Rating', prefs.getString("rankTitle"), value]);">ClickMe</a>
 </div>
+
+	<script>
+	var starList = document.getElementsByClassName("star");
+	  
+	  for (var i=0; i<starList.length; i++)
+	  {   
+	  	var star = starList.item(i);
+	  	console.log(star);
+	  	star.onClick=function(){
+	  		var value = this.id[4];
+	  		_gaq.push(['_trackEvent', 'Ranking Gadget', 'Rating', prefs.getString("rankTitle"), value]);
+	  		console.log(value);	  		
+	  	}
+	  }
+	  </script>
   ]]> 
   </Content>
 </Module>
