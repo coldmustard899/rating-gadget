@@ -22,8 +22,8 @@
 	</script>
 	
 	<style>
-		li.star {display:block; float:left; width:80px; height:80px; background(https://rating-gadget.googlecode.com/svn/trunk/WebContent/images/greystar.gif);}
-		.highlight {background(https://rating-gadget.googlecode.com/svn/trunk/WebContent/images/goldstar.gif);}
+		li.star {display:block; float:left; width:18px; height:22px; background:url('https://rating-gadget.googlecode.com/svn/trunk/WebContent/images/greystar.gif') no-repeat top left;}
+		.highlight {background:url('https://rating-gadget.googlecode.com/svn/trunk/WebContent/images/goldstar.gif') no-repeat top left;}
 	</style>
 
 	<div id="fbContent">
