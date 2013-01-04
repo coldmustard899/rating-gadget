@@ -47,6 +47,7 @@
 	  	var star = starList.item(i);
 	  	console.log(star);
 	  	star.onClick=function(){
+	  		alert("kittens");
 	  		var value = this.id[4];
 	  		_gaq.push(['_trackEvent', 'Ranking Gadget', 'Rating', prefs.getString("rankTitle"), value]);
 	  		console.log(value);	  		
