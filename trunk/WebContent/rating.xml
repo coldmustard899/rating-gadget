@@ -27,8 +27,8 @@
 	
 	<style>
 		.star {display:block; float:left; width:18px; height:22px; background:url('https://rating-gadget.googlecode.com/svn/trunk/WebContent/images/stars.gif') no-repeat 0 0;}
-		.star:hover {background-position: 0 22}
-		li.highlight {background-position: 0 44}
+		.star:hover {background-position: 0 -22}
+		li.highlight {background-position: 0 -44}
 		
 		#usefulQuestion{display:none}
 		#rankThank{display:none; clear:both}
